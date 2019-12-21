@@ -14,12 +14,18 @@ public class RTest5 {
 		
 		rengine.assign("x",x);
 		rengine.assign("y",y);
+		String str = "plot(x,y)";
+		rengine.eval(str);
 		//rengine.eval("jpeg(\"Image_U.jpeg\", width = 670, height = 470, units = \"px\")");
-		rengine.eval("plot(x,y,xlab=\"Vin\",ylab=\"Vout\")");
-		rengine.eval("abline(h=20)");
 		
-		//rengine.eval("library(\"ggplot2\")");
+		//rengine.eval("plot(x,y,xlab=\"Vin\",ylab=\"Vout\")");
+		//rengine.eval("abline(h=20)");
+		//rengine.eval("windows()");
+		//String str = "library(\"ggplot2\")";
+		//rengine.eval(str);
 		//rengine.eval("ggplot(midwest, aes(x=area, y=poptotal)) + geom_point()");
+		//rengine.eval("dev.off()");
+		
 		
 	}
 
