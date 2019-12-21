@@ -35,11 +35,12 @@ public static void main(String[] args) {
     System.out.println("histval$mids:" + xvalExp);
 
     System.out.println("histval$counts:" + yvalExp);
-    /**
+    
     r.eval("x<-seq(1:20)");
     r.eval("y=2*x+12");
-    r.eval("plot(c(-2,3), c(-1,5), type = \"n\", xlab = \"x\", ylab = \"y\", asp = 1, plot=TRUE)");
-    r.eval("");*/
+    r.eval("plot(x,y,plot=TRUE)");
+   // r.eval("plot(c(-2,3), c(-1,5), type = \"n\", xlab = \"x\", ylab = \"y\", asp = 1, plot=TRUE)");
+   // r.eval("");
     
   }
 
