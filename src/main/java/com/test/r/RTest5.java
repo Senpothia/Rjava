@@ -16,6 +16,11 @@ public class RTest5 {
 		rengine.assign("y",y);
 		String str = "plot(x,y)";
 		rengine.eval(str);
+		rengine.eval("mod_U<-lm(y ~ x)");
+		rengine.eval("res<-coef(mod_U)");
+	    double [] coef = rengine.eval("res").asDoubleArray();
+	    System.out.println(coef[0]);
+	    System.out.println(coef[1]);
 		//rengine.eval("jpeg(\"Image_U.jpeg\", width = 670, height = 470, units = \"px\")");
 		
 		//rengine.eval("plot(x,y,xlab=\"Vin\",ylab=\"Vout\")");
