@@ -10,8 +10,8 @@ public class RTest5 {
 
 		double[] x = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-		double[] y = { 14, 16, 18, 20, 22, 24, 26, 28, 30, 32 };
-
+		double[] y = { 14, 12, 18, 20, 26, 24, 27, 28, 30, 32 };
+	
 		rengine.assign("x", x);
 		rengine.assign("y", y);
 
@@ -20,7 +20,7 @@ public class RTest5 {
 		rengine.eval(str);
 		rengine.eval("mod_U<-lm(y ~ x)");
 		rengine.eval("predict(mod_U, interval=\"confidence\")");
-		rengine.eval("jpeg(\"Image_U.jpeg\", width = 670, height = 470, units = \"px\")");
+		//rengine.eval("png(\"Image_U.png\", width = 670, height = 470, units = \"px\")");
 		rengine.eval("plot(x,y,xlab=\"Références\",ylab=\"Mesures\",main=\"Etalonage tension\")");
 		rengine.eval("abline(mod_U)");
 		rengine.eval("segments(x,fitted(mod_U),x,y)");
